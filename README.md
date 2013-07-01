@@ -8,7 +8,7 @@ http://www.saltstack.org for more information on Salt
 
 Contains the following states:
 
-graphite - wholly contained server 
-graphite-web 
-carbon 
-whisper 
+graphite - wholly contained server  
+graphite-web  
+carbon  
+whisper  
