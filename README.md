@@ -1,4 +1,6 @@
 salt-states
 ===========
 
-Various Salt-States I've thrown together
+Various salt-states I've thrown together
+
+http://www.saltstack.org for more information on Salt
