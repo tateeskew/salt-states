@@ -1,0 +1,7 @@
+{
+    "client": {
+      "name": "sensu-master.tld",
+      "address": "{{ pillar['sensu-master-address'] }}",
+      "subscriptions": [ "test" ]
+    }
+}

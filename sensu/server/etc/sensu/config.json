@@ -1,0 +1,29 @@
+{
+    "rabbitmq": {
+      "port": 5672,
+      "host": "{{ pillar['sensu-master-address'] }}",
+      "user": "sensu",
+      "password": "{{ pillar['rabbitmq-sensu-user-password'] }}",
+      "vhost": "/sensu"
+    },
+    "redis": {
+      "host": "{{ pillar['sensu-master-address'] }}",
+      "port": 6379
+    },
+    "api": {
+      "host": "{{ pillar['sensu-master-address'] }}",
+      "port": 4567
+    },
+    "dashboard": {
+      "host": "{{ pillar['sensu-master-address'] }}",
+      "port": 8080,
+      "user": "admin",
+      "password": "secret"
+    },
+    "handlers": {
+      "default": {
+        "type": "pipe",
+        "command": "true"
+      }
+    }
+  }
