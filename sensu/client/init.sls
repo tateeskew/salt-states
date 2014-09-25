@@ -8,6 +8,8 @@ sensu-client:
     - enable: True
     - require:
       - pkg: sensu
+      - file: /etc/sensu/conf.d/client.json
+      - file: /etc/sensu/config.json
     - watch:
       - file: /etc/sensu/conf.d/client.json
 
@@ -18,8 +20,10 @@ sensu-client:
   file.managed:
     - source: salt://sensu/client/etc/sensu/conf.d/client.json
     - template: jinja
+    - user: sensu
 
 /etc/sensu/config.json:
   file.managed:
     - source: salt://sensu/client/etc/sensu/config.json
     - template: jinja
+    - user: sensu
