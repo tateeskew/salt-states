@@ -95,7 +95,7 @@ add-rabbitmq-sensu-vhost:
 
 add-sensu-user-to-rabbitmq:
   cmd.run:
-    - name: rabbitmqctl add_user sensu {{ pillar['rabbitmq-sensu-user-password'] }}
+    - name: rabbitmqctl add_user sensu {{ salt['pillar.get']('sensu:rabbitmq-user-password') }}
     - unless: rabbitmqctl list_users | grep sensu
     - require:
       - cmd: add-rabbitmq-sensu-vhost

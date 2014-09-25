@@ -1,7 +1,7 @@
 {
     "client": {
-      "name": "sensu-master.tld",
-      "address": "{{ pillar['sensu-master-address'] }}",
+      "name": "{{ grains['id'] }}",
+      "address": "{{ salt['network.ip_addrs']()[0] }}",
       "subscriptions": [ "test" ]
     }
 }
