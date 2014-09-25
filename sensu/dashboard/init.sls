@@ -3,8 +3,11 @@ include:
 
 # Sensu Dashboard Service
 
-sensu-dashboard:
+uchiwa:
   service.running:
     - enable: True
     - require:
       - pkg: sensu
+      - pkg: uchiwa
+  pkg:
+    - installed
