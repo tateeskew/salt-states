@@ -5,7 +5,7 @@
 # Make the necessary changes for your environment.
 # - Tate Eskew
 
-{% if pillar['use-ssl']  == 'True' %}
+{% if salt['pillar.get']('sensu:use-ssl', false)  == true %}
 
 include:
   - sensu.dependencies
