@@ -1,0 +1,6 @@
+sensu:
+  master-address: 192.168.1.1 # sensu server
+  rabbitmq-user-password: secure_pw
+  use-ssl: false # ssl between sensu and rabbitmq
+  redis-master-address: 127.0.0.1 # redis server
+  bind-redis-to-all-interfaces: true

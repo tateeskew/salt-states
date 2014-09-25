@@ -1,0 +1,8 @@
+base:
+  '*':
+    - sensu.client
+
+  'sensu-server:
+    - sensu.server
+    - sensu.api
+    - sensu.dashboard #uchiwa
